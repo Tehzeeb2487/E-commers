@@ -1,35 +1,122 @@
         @font-face {
-        font-family: Tehzeeb;
-        src: url(Fira_Sans/FiraSans-light.ttf);
+        font-family: "Tehzeeb";
+        src: url("./Fira_Sans/FiraSans-Light.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
         }
         * {
             margin: 0;
             padding: 0;
         }
-        @media (max-width:1400px){
-            body{
-                margin: 50px 195px;
+        
+        @media (max-width: 575.98px) {
+            .par, .par2nd, .par3rd, .par4th,
+            .par6th, .par7th, .par8th, .par9th {
+                width: 350px !important;
+                height: auto !important;
+                margin: 10px !important;
+                padding-bottom: 10px !important;
+            }
+            .par3rd { padding-bottom: 50px !important; }
+            .par5th { width: 280px !important;}
+
+            .img1 {width: 98% !important;}
+            .pro { left: 141px !important; }
+            .text1 img {
+                width: 60px;
+                height: auto;
+            }
+
+            textarea {
+                width: 100%;
+                padding-left: 3px !important;
+            }
+
+            .va {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .span1, .span2 {bottom: 9px !important;}
+            .btn{box-shadow: none !important;}
+        }
+
+        @media (max-width: 380px) {
+            .par7th, .par8th, .par9th { width: 300px !important; }
+        }
+
+        @media (max-width: 330px) {
+            .par, .par2nd, .par3rd, .par4th,
+            .par6th {
+                margin: 10px 0 !important;
+                width: 300px !important;
+            }
+            .par5th, .par7th, .par8th, .par9th { width: 240px !important;}
+            .dv1 h3{font-size: 10px !important;}
+        }
+
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .par, .par2nd, .par3rd, .par4th,
+            .par5th, .par6th, .par7th, .par8th, .par9th {
+                width: 95%;
+                margin: auto;
+            }
+
+            .text1 img {
+                width: 80px;
+                height: auto;
             }
         }
-         @media (max-width:1000px){
-            body{
-                margin: 50px 50px;
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .par, .par2nd, .par3rd, .par4th,
+            .par5th, .par6th, .par7th, .par8th, .par9th {
+                width: 85%;
+            }
+
+            .text1 img {
+                width: 100px;
+            }
+
+            .par5th, .par6th {
+                margin: 20px 0 0 20px !important;
             }
         }
-        @media (max-width:400px){
-            body{
-                margin: 50px 10px;
+
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            .par, .par2nd, .par3rd, .par4th,
+            .par5th, .par6th, .par7th, .par8th, .par9th {
+                width: 75%;
+            }
+
+            .par5th, .par6th {
+                margin: 20px 0 0 20px !important;
             }
         }
+
+        @media (min-width: 1200px) {
+            .par, .par2nd, .par3rd, .par4th,
+            .par5th, .par6th, .par7th, .par8th, .par9th {
+                width: 65%;
+            }
+        }
+
 
         body {
             background: #f5f5f5;
             display: flex;
-            flex-direction: row;
             flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
             overflow-x: hidden;
-            padding: 50px 120px;
-            font-family: "Tehzeeb";
+            padding: 50px 0;
+            font-family: "Tehzeeb", sans-serif;
+        }
+
+        .head-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         /*card*/
@@ -43,7 +130,6 @@
             box-shadow: 0 0 50px 2px #dcdcdc;
             margin-left: 20px;
             padding-top: 0;
-            /*margin-top: 50px;*/
             position: relative;
         }
         .img1{
@@ -228,8 +314,9 @@
             box-shadow: 1px 5px 10px rgb(249 190 200);
         }
         .sp4 {
-            margin: 30px 85px;
             font-size: 14px;
+            display: flex;
+            justify-content: center;
         }
         .sp4 i{color: #767373;}
         .sp4 .fa-facebook-f{margin-right: 10px}
@@ -319,7 +406,7 @@
             padding-top: 7px;
             font-size: 11px;
         }
-        .bn1{
+        .bn1, .bn2{
             font-size: 11px;
             font-weight: bolder;
             background: #fff;
@@ -334,18 +421,7 @@
             left: 45px;
         }
         .bn2{
-            font-size: 11px;
-            font-weight: bolder;
             color: rgb(237 0 67);
-            background: #fff;
-            padding: 3px 9px;
-            border-top: 2px solid #f8e0e0;
-            border-right: 1px solid #ffd5d5;
-            border-bottom: 2px solid #f8e0e0;
-            border-left: 1px solid #ffd5d5;
-            border-radius: 5px;
-            position: absolute;
-            bottom: 18px;
             left: 105px;
         }
 
@@ -391,7 +467,7 @@
             justify-content: space-between;
             padding: 5px;
         }
-        .dv1 h3{font-size: 14px;font-weight: light;}
+        .dv1 h3{font-size: 14px;}
         .cd{display: flex;}
         .cd1{
             width: 90px;
@@ -405,7 +481,12 @@
             background: #e0dada;
             margin-top: 8px;
         }
-        .dv1 p{font-size: 12px;color: #767373}  
+        .dv1 p{font-size: 12px;color: #767373} 
+        .butt-head { 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } 
         .butt{
             color: rgb(233 1 67);
             font-size: 12px;
@@ -413,12 +494,17 @@
             border: 1px solid rgb(254 174 197);
             border-radius: 5px;
             background: #fff;
-            margin-left: 50px;
         }
         .butt i{font-size: 10px} 
 
         /*card 1*/
-        .va{display: flex;flex-direction: row;flex-wrap: wrap;}
+        .va{display: flex;flex-wrap: wrap;}
+        .third-part {    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
         .par5th {
             height: 377px;
             width: 200px;
@@ -546,10 +632,14 @@
             padding: 20px 15px;
             display: flex;
             flex-direction: row;
-            justify-content: center;
             justify-content: space-between;
             align-items: center;
             position: relative ;
+        }
+        .par7th-child {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         .d7th{
             border-radius: 100%;
@@ -565,7 +655,8 @@
             height: 40px;
             border-radius: 100%;
         }
-        .head h5{font-size: 12px;padding-right: 310px}
+        .head {margin-left: 15px;}
+        .head h5{font-size: 12px;}
         .head p{font-size: 10px;}
         .icon{font-size: 12px;}
         .icon i{
